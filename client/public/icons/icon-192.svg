@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" width="192" height="192">
+  <rect width="192" height="192" rx="40" fill="#0F766E"/>
+  <!-- Medical Cross with Nature Motif -->
+  <path d="M96 36 V156" stroke="#FFFFFF" stroke-width="24" stroke-linecap="round"/>
+  <path d="M36 96 H156" stroke="#FFFFFF" stroke-width="24" stroke-linecap="round"/>
+  <!-- Leaf detail -->
+  <path d="M108 52 C126 52 144 68 144 86 C126 86 108 70 108 52 Z" fill="#34D399"/>
+</svg>

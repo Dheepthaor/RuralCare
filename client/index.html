@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/icons/icon-192.svg" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0F766E" />
+    <meta
+      name="description"
+      content="RuralCare: Accessible Rural Healthcare Platform with Online Appointment Booking, Ambulance Assistance, and Offline Information Access."
+    />
+    <title>RuralCare — Accessible Rural Healthcare Platform</title>
+    <!-- Google Fonts: Plus Jakarta Sans, Inter, and Noto Sans Malayalam -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Malayalam:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-slate-50 text-slate-800 antialiased selection:bg-teal-100 selection:text-teal-900">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <script>
+      // Register Service Worker for PWA & Offline Support
+      if ('serviceWorker' in navigator && window.location.protocol.startsWith('http')) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker
+            .register('/sw.js')
+            .then((registration) => {
+              console.log('[PWA] ServiceWorker registered with scope:', registration.scope);
+            })
+            .catch((error) => {
+              console.log('[PWA] ServiceWorker registration failed:', error);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>
